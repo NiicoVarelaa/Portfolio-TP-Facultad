@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react'
 
 const Header = () => {
-    return <div>Header</div>;
-};
 
-export default Header;
+    let alumno = "Nicolas Varela"
+
+    return (
+        <div>
+            <h1>{alumno}</h1>
+        </div>
+    )
+}
+
+export default Header
