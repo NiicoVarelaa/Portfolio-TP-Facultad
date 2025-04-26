@@ -1,20 +1,29 @@
-import React from 'react'
+import React from "react";
 
 export const MainHome = ({ Alumno }) => {
-
-    const { imagen, nombre, edad, carrera, lenguajes } = Alumno
+    const { imagen, nombre, edad, carrera, lenguajes } = Alumno;
 
     return (
-        <div>
-            <img src={imagen} alt={`Foto de ${nombre}`} />
-            <h1>{nombre}</h1>
-            <p>Edad: {edad}</p>
-            <p>Carrera: {carrera}</p>
-            <ul>
-                {lenguajes.map((leng, index) => (
-                    <li key={index}>{leng}</li>
-                ))}
-            </ul>
+        <div className="mainHome">
+            <div className="card">
+                <img src={imagen} alt={`${nombre}`} className="card-img" />
+                <div className="card-info">
+                    <h2>{nombre}</h2>
+                    <p>
+                        <strong>Edad:</strong> {edad} años.
+                    </p>
+                    <p>
+                        <strong>Carrera:</strong> {carrera}
+                    </p>
+                    <div className="tags-container">
+                        {lenguajes.map((leng, index) => (
+                            <span key={index} className="tag">
+                                {leng}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};

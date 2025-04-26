@@ -10,12 +10,12 @@ const Home = () => {
         imagen: nico,
         nombre: "Nicolás Varela",
         edad: 27,
-        carrera: "Tecnicatura en Programación",
-        lenguajes: ["Java", "JavaScript", "React"],
+        carrera: "Estudiante de la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional - Facultad Regional Tucumán (UTN-FRT).",
+        lenguajes: ["Java", "JavaScript", "React", "Node.js", "Python", "MongoDB"],
     }
 
     return (
-        <div>
+        <div className='app-container'>
             <Header />
             <MainHome Alumno={Alumno} />
             <Footer />
